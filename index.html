@@ -1,0 +1,121 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>2020年2月14日情人节</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<style type="text/css">
+		@font-face {
+			font-family: digit;
+			src: url('digital-7_mono.ttf') format("truetype");
+		}
+	</style>
+	<link href="css/default.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/garden.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
+</head>
+
+<body>
+	<div id="mainDiv">
+		<div id="content">
+			<div id="code">
+				<span class="comments">/**</span><br />
+				<span class="space"/><span class="comments">* 首先祝小猪崽子情人节快乐！</span><br />
+				<span class="space"/><span class="comments">* 可惜因为疫情的缘故，这个情人节大小猪不能见面了，</span><br />
+				<span class="space"/><span class="comments">* 大猪想破了脑袋，怎么才能让小猪过一个开心的情人节呢，</span><br />
+				<span class="space"/><span class="comments">* 突然大猪灵机一动，想到可以给piggie小程序加上情人节特辑嘿嘿，</span><br />
+				<span class="space"/><span class="comments">* 可是这段时间微信小程序的审核管制了！所以先做个网页版~</span><br />
+				<span class="space"/><span class="comments">* 这种代码风格的滚动贺卡，小猪可以简单地看到大猪是怎么写程序的，</span><br />
+				<span class="space"/><span class="comments">* 大猪觉得挺有创意！学习了一下!自己做了一个~</span><br />
+				<span class="space"/><span class="comments">* 希望小猪会喜欢</span><br />
+				<span class="space"/><span class="comments">*/</span><br />
+				<span class="comments">// 2012年，素不相识的我们进入了同一所高中。 </span><br />
+				<span class="comments">// 那个时候的我们，还是懵懂无知的少年 </span><br />
+				Boy i = <span class="keyword">new</span> Boy(<span class="string">"stranger"</span>);<br />
+				Girl u = <span class="keyword">new</span> Girl(<span class="string">"stranger"</span>);<br />
+				<span class="comments">// 某种缘分，让我们相识在南山的英语夏令营 </span><br />
+				<span class="comments">// “My name is Ted.” </span><br />
+				<span class="comments">// “My name is Helene.” </span><br />
+				i.name = <span class="string">"TedQin"</span>;<br />
+				u.name = <span class="string">"EleneXie"</span>;<br />
+				<span class="comments">// 这个穿着红色漆皮鞋的女孩深深吸引了我， </span><br />
+				<span class="comments">// 16岁的少年，感觉一股淡咸味的海水涌上心头， </span><br />
+				u.impress(i);<br />
+				<span class="comments">// 2014年6月8日，我们在一起了，</span><br />
+				i.love(u);<br />
+				<span class="comments">// 从那以后，我们经历了许多事情</span><br />
+				enterCollege(u, i, <span class="string">"Shanghai"</span>);<br />
+				likeFood(u, i, <span class="string">"hotpot"</span>);<br />
+				eatFood(u, i, <span class="string">"Nanjing LittleLobsters"</span>);<br />
+				play(u, i, <span class="string">"Shanghai Ocean Aquarium"</span>);<br />
+				play(u, i, <span class="string">"Disneyland"</span>);<br />
+				makeCack(u, i);<br />
+				celebBirthday(u, i, <span class="string">"Chenshan Botanical Garden"</span>);<br />
+				game(u, i, <span class="string">"zelda", "don't starve", "yinyangshi"</span>);<br />
+				study(u, i, <span class="string">"TianTianKaFeiMao Cafe"</span>);<br />
+				......<br />
+				<span class="comments">// 还有很多</span><br />
+				<span class="comments">// 我每天都很想你，爱你，</span><br />
+				i.love(u);<br />
+				i.miss(u);<br />
+				<span class="comments">// 我会一直在你身边，</span><br />
+				i.takeCareOf(u);<br />
+				<span class="comments">// 我永远爱你。</span><br />  
+				forEver = <span class="keyword">POSITIVE_INFINITY</span>;<br />        
+				<span class="keyword">while</span> (<span class="keyword">forEver</span>) {<br />
+				<span class="placeholder"/>i.love(u);<br />
+				<span class="placeholder"/><span class="comments">// 感谢上天让我能遇见你</span><br />
+				<span class="placeholder"/><span class="comments">// 我最最最最爱的人</span><br />
+				}<br />
+				i.liveHappilyWith(u);<br />
+			</div>
+			<div id="loveHeart">
+				<canvas id="garden"></canvas>
+				<div id="words">
+					<div id="messages">
+						Piggie, I have fallen in love with you for
+						<div id="elapseClock"></div>
+					</div>
+					<div id="loveu">
+						Sunshine always around.<br/>
+						<div class="signature">- BigPiggie</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		var offsetX = $("#loveHeart").width() / 2;
+		var offsetY = $("#loveHeart").height() / 2 - 55;
+		var together = new Date();
+		together.setFullYear(2014, 6, 8);
+		together.setHours(22);
+		together.setMinutes(0);
+		together.setSeconds(0);
+		together.setMilliseconds(0);
+		
+		if (!document.createElement('canvas').getContext) {
+			var msg = document.createElement("div");
+			msg.id = "errorMsg";
+			msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+			document.body.appendChild(msg);
+			$("#code").css("display", "none")
+			$("#copyright").css("position", "absolute");
+			$("#copyright").css("bottom", "10px");
+		    document.execCommand("stop");
+		} else {
+			setTimeout(function () {
+				startHeartAnimation();
+			}, 7000);
+
+			timeElapse(together);
+			setInterval(function () {
+				timeElapse(together);
+			}, 600);
+
+			adjustCodePosition();
+			$("#code").typewriter();
+		}
+	</script>
+</body>
+</html>
